@@ -10,13 +10,13 @@ import java.io.Serializable;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "correntistas")
+@Table(name = "tab_correntista")
 public class Correntista implements Serializable {
     @Serial
-    private final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(nullable = false)
@@ -24,7 +24,6 @@ public class Correntista implements Serializable {
 
     @Column(nullable = false)
     private String nome;
-
-    @OneToOne(mappedBy = "correntista")
+    @Embedded
     private Conta conta;
 }
