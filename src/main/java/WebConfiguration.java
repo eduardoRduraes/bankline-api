@@ -12,7 +12,7 @@ public class WebConfiguration {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry
-                        .addMapping("/api/v1/**")
+                        .addMapping("/swagger-ui/**")
                         .allowedOrigins("https://bankline-api-production-3838.up.railway.app/")
                         .allowedHeaders("Authorization", "Content-Type", "Accept")
                         .allowedMethods("GET", "POST", "PUT", "DELETE");
