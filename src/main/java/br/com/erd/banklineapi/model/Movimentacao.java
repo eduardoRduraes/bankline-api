@@ -29,6 +29,10 @@ public class Movimentacao implements Serializable {
 
     @Column(nullable = false)
     private double valor;
+
+    @Column(name = "id_conta")
+    private long idConta;
+
     @Enumerated(EnumType.STRING)
     private MovimentacaoTipo tipo;
 }
