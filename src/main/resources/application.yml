@@ -1,5 +1,5 @@
 cors:
-  originPatterns: "https://bankline-api-production-3838.up.railway.app, http://localhost:8080"
+  originPatterns: "https://bankline-api-production-3838.up.railway.app,http://localhost:8080"
 spring:
   application:
     name: bankline-api

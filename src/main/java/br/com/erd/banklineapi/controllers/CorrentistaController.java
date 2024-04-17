@@ -5,7 +5,7 @@ import br.com.erd.banklineapi.model.Correntista;
 import br.com.erd.banklineapi.services.CorrentistaService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+@CrossOrigin(origins = "https://bankline-api-production-3838.up.railway.app")
 @RestController
 @RequestMapping("/correntistas")
 public class CorrentistaController {
@@ -39,7 +39,7 @@ public class CorrentistaController {
     public ResponseEntity<?> findCorrentista(@PathVariable("id") long id){
         return ResponseEntity.status(201).body(this.correntistaService.find(id));
     }
-    @CrossOrigin(origins = {"https://bankline-api-production-3838.up.railway.app", "http://localhost:8080"})
+
     @GetMapping("/findall")
     public ResponseEntity<?> findTodosCorrentista(){
         return ResponseEntity.status(201).body(this.correntistaService.list());
