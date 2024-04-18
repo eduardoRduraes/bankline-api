@@ -11,9 +11,10 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("*")
+                .allowedOrigins("https://bankline-api-production-3838.up.railway.app")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
-                .allowedHeaders("*")
+                .allowedHeaders("header1", "header2", "header3")
+                .exposedHeaders("header1", "header2")
                 .allowCredentials(true).maxAge(3600);
     }
 }
