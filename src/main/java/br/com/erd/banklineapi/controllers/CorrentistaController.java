@@ -16,8 +16,6 @@ public class CorrentistaController {
 
     @PostMapping("/create")
     public ResponseEntity<?> createCorrentista(@RequestBody NovoCorrentista data){
-
-
         return ResponseEntity.status(200).body(this.correntistaService.create(data));
     }
 
