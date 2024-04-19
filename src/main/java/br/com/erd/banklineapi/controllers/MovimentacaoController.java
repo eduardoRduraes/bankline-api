@@ -15,7 +15,7 @@ public class MovimentacaoController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<?> createMovimentacao(MovimentacaoDTO data){
+    public ResponseEntity<?> createMovimentacao(@RequestBody MovimentacaoDTO data){
         return ResponseEntity.status(200).body(this.movimentacaoService.create(data));
     }
 

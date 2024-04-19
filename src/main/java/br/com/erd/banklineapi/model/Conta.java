@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "tab_conta")
 public class Conta {
     @Column(name = "conta_numero")
-    private long numero;
+    private Long numero;
 
     @Column(name = "conta_saldo")
     private double saldo;
